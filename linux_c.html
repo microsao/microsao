@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li><a href="del_char.html">删除字符</a></li>
+							<li><a href="mem.html">模拟内存管理</a></li>
+							<li><a href="del_point.html">删除节点</a></li>
+							<li class="active"><a href="#">Linux C编程</a></li>
+							<li><a href="move_num.html">移动数字</a></li>
+							<li><a href="os.html">操作系统相关</a></li>
+							<li><a href="point_file.html">指针-文件</a></li>
+							<li><a href="struct.html">结构体排序</a></li>
+							<li><a href="xxx.html">杂七杂八</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>linux下c编程<a href="#" title="#" class="right_container_title"  target="_blank"></a></h2></div></div>
+					<article class="row">						
+						<div class="col col-md-12">
+							<h4>envir</h4>
+							<p>#include <stdio.h><br>
+#include <stdlib.h><br>
+#include <sys/types.h><br>
+#include <sys/wait.h><br>
+#include <unistd.h><br>
+<br>
+int main()<br>
+{<br>
+	pid_t a;<br>
+	char *envp[]={"PATH=/tmp", "USER=liu", NULL};<br>
+    	char *arg[]={"env", NULL};<br>
+<br>
+	if( (a=fork())<0)<br>
+        {<br>
+                printf("fork error!\n");<br>
+        }<br>
+        else if (a==0)<br>
+        {<br>
+		if (execve ("/usr/bin/env", arg, envp) == -1) <br>
+		{<br>
+                	perror ("execve");<br>
+		}<br>
+        }<br>
+	return 0;<br>
+	
+}<br></p>
+<h4>fork_main</h4>
+<p>#include <stdio.h><br>
+#include <stdlib.h><br>
+#include <sys/types.h><br>
+#include <unistd.h><br>
+#include <string.h><br>
+<br>
+int main (void)<br>
+{<br>
+    int i;<br>
+    char ch[2];<br>
+    for (i = 0; i < 3; i++) {<br>
+        scanf ("%s", ch);<br>
+	pid_t a;<br>
+	a = fork();<br>
+	if (a<0)<br>
+	{<br>
+		printf ("fork error\n");<br>
+		exit (0);<br>
+	}<br>
+	else if (a == 0)<br>
+	{<br>
+		execl ("./fun_of_fork", "fun_of_fork", ch, NULL);<br>
+	}<br>
+    }<br>
+    return 0;<br>
+}<br>
+</p>
+<h4>fun_of_fork</h4>
+<p>#include <stdio.h><br>
+#include <stdlib.h><br>
+#include <string.h><br>
+<br>
+void chengfabiao (void);<br>
+int jiecheng (int i);<br>
+void jiafa (void);<br>
+<br>
+<br>
+int main (int argc, char *argv[])<br>
+{<br>
+    	if (argc != 2) <br>
+	{<br>
+        perror ("argument error!");<br>
+        exit(0);<br>
+    	}<br>
+   	 if (!strcmp (argv[1], "a")) <br>
+	{<br>
+       		 chengfabiao ();<br>
+	}<br>
+   	 else if (!strcmp (argv[1], "b")) <br>
+	{<br>
+       		 printf ("10! = %d\n", jiecheng (10));<br>
+	}<br>
+    	 else if (!strcmp (argv[1], "c"))<br>
+	{ <br>
+     		 jiafa ();<br>
+	}<br>
+   	 else <br>
+	{<br>
+     		   printf ("argument errorr!\n");<br>
+    	}<br>
+    return 0;<br>
+}<br>
+<br>
+void chengfabiao (void)<br>
+{<br>
+    int     i, j;<br>
+<br>
+    for (i = 1; i < 10; i++) {<br>
+        for (j = 1; j <= i; j++)<br>
+            printf ("%d*%d= %-3d  ", i, j, i * j);<br>
+        printf ("\n");<br>
+    }<br>
+}<br>
+<br>
+int jiecheng (int i)<br>
+{<br>
+    if (i == 1)<br>
+        return 1;<br>
+    return jiecheng (i - 1) * i;<br>
+}<br>
+<br>
+void jiafa (void)<br>
+{<br>
+    int     i, sum;<br>
+<br>
+    for (i = 1, sum = 0; i <= 20; i++)<br>
+        sum += i;<br>
+<br>
+    printf ("1+2+3+...+20 = %d\n", sum);<br>
+}<br></p>
+<h4>killsender</h4>
+<p>#include <stdio.h><br>
+#include <signal.h><br>
+void main(int argc,char *argv[])<br>
+{<br>
+	int pid,signo;<br>
+	if(argc!=3)	<br>
+	{<br>
+		printf("usage: killsender pid signo\n");<br>
+		return;<br>
+	}<br>
+	sscanf(argv[1],"%d",&pid); //获取参数pid<br>
+	printf ("%d\n",pid);<br>
+	sscanf(argv[2],"%d",&signo); //获取参数signo<br>
+	printf ("%d\n",signo);<br>
+	printf ("%s\n",argv[2]);<br>
+	if(kill(pid,signo)<0)<br>
+	{//发送信号<br>
+		perror("kill");		<br>
+		return;<br>
+	}<br>
+	printf("ok: send out signal via kill system call!\n");    <br>
+}<br>
+<br></p>
+<h4>killrecever</h4>
+<p>#include <stdio.h>
+<br>
+#include <unistd.h>
+<br>
+#include <sys/types.h>
+<br>
+#include <signal.h>
+<br>
+//SIGUSR1信号处理函数
+<br>
+void CbSigUsr1(int signo)  {//输出接收到的信号信息
+<br>
+	printf("\nreceive signal=%d.\n",signo);}
+<br>
+void main()	{//安装SIGUSR1信号
+<br>
+	if(signal(SIGUSR1,CbSigUsr1)==SIG_ERR){
+<br>
+		perror("signal");
+<br>
+		return;}
+<br>
+	printf("my pid is %d\n",getpid());
+<br>
+	printf("waiting for SIGUSR1...\n");
+<br>
+//暂停，等待信号
+<br>
+	pause();}
+<br></p>
+<h4>mv</h4>
+<p>#include <stdio.h><br>
+#include <stdlib.h><br>
+#include <fcntl.h><br>
+#include <dirent.h><br>
+#include <unistd.h><br>
+#include <sys/stat.h><br>
+<br>
+<br>
+int main(int argc, char *argv[])<br>
+{<br>
+	struct stat stat_src;<br>
+	struct stat stat_dst;<br>
+	char ch;<br>
+	//umask(0000);<br>
+	if (argc < 3)<br>
+	{<br>
+		fprintf(stderr,"usage %s src_dir dst_src\n",argv[0]);<br>
+		exit (EXIT_FAILURE);<br>
+	}<br>
+	//if (S_ISREG (stat_src.st_mode))<br>
+	//{<br>
+		if (stat(argv[2], &stat_dst) == -1 )<br>
+		{<br>
+			//cp_file (argv[1],argv[2],stat_src.st_mode);<br>
+			rename(argv[1],argv[2]);<br>
+			unlink(argv[1]);<br>
+		}<br>
+		else<br>
+		{<br>
+			if (S_ISDIR (stat_dst.st_mode))<br>
+			{<br>
+				char *ptr = (char *)malloc(strlen(argv[2])+1+strlen(argv[1])+1);<br>
+				sprintf(ptr,"%s/%s\0",argv[2],argv[1]);<br>
+				//cp_file (argv[1],ptr,stat_src.st_mode);<br>
+				rename(argv[1],ptr);<br>
+				unlink (argv[1]);<br>
+			}<br>
+			else<br>
+			{<br>
+				printf("file %s has been their already ,overwrite?[y/n]:",argv[2]);<br>
+				scanf ("%c",&ch);<br>
+				getchar();<br>
+				if (ch == 'Y' || ch == 'y')<br>
+				{<br>
+					unlink(argv[2]);<br>
+					//cp_file (argv[1],argv[2],stat_src.st_mode);<br>
+					rename(argv[1],argv[2]);<br>
+					unlink(argv[1]);<br>
+				}<br>
+			}<br>
+		}<br>
+	//}<br>
+}<br>
+</p>
+<h4>open_write</h4>
+<p>#include <fcntl.h><br>
+#include <stdlib.h><br>
+#include <stdio.h><br>
+<br>
+#define buff 5000<br>
+<br>
+int main(int argc, char *argv[])<br>
+{<br>
+	int fd,fd_pass,num;<br>
+	char buf[buff];<br>
+	if ((fd=open("/root/Desktop/linux/pass",O_CREAT,0644))==-1)<br>
+	{<br>
+		perror("open");<br>
+		//exit (EXIT_FAILURE);<br>
+	}<br>
+	close (fd);<br>
+	if ((fd=open("/root/Desktop/linux/pass",O_WRONLY))==-1)<br>
+	{<br>
+		perror("open");<br>
+	}<br>
+	if ((fd_pass=open("/etc/passwd",O_RDONLY))==-1)<br>
+	{<br>
+		perror("open");<br>
+	}<br>
+	num = read (fd_pass,buf,buff);<br>
+	write (fd,buf,num);<br>
+	close(fd);<br>
+	close(fd_pass);<br>
+}<br>
+</p>								
+							</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="index.html">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+</body>
+</html>

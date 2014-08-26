@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li><a href="del_char.html">删除字符</a></li>
+							<li><a href="mem.html">模拟内存管理</a></li>
+							<li><a href="del_point.html">删除节点</a></li>
+							<li><a href="linux_c.html">Linux C编程</a></li>
+							<li><a href="move_num.html">移动数字</a></li>
+							<li><a href="os.html">操作系统相关</a></li>
+							<li><a href="point_file.html">指针-文件</a></li>
+							<li><a href="struct.html">结构体排序</a></li>
+							<li class="active"><a href="#">杂七杂八</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>简单的小程序<a href="#" title="#" class="right_container_title"  target="_blank"></a></h2></div></div>
+					<article class="row">							
+						<div class="col col-md-12">
+							<h4>math库函数</h4>
+							<p>#include <stdio.h><br>
+#include <math.h><br>
+main()<br>
+{<br>
+	double x, y;<br>
+	printf ("请输入一个数：\n");<br>
+	scanf ("%lf",&x);<br>
+	if (0<=x&&x<20)<br>
+	y=5*x+11;<br>
+	else if (x<40)<br>
+	y=sin(x)+cos(x);<br>
+	else if (x<60)<br>
+	y=exp(x)-1;<br>
+	else if (x<80)<br>
+	y=log(x+1);<br>
+	else <br>
+	y=0;<br>
+	printf ("结果为：%lf\n",y);<br>
+}<br></p>
+							<h4>鞍点</h4>
+							<p>#include<stdio.h><br>
+<br>
+void main()<br>
+{<br>
+	int wol,col,i,i1,j,k,l=0,k1=0,a[15][15];<br>
+	<br>
+	printf("please input wol col");<br>
+	scanf("%d%d",&wol,&col);<br>
+<br>
+	printf("请输入数据:");<br>
+	for(i=0;i<wol;i++)<br>
+		for(j=0;j<col;j++)<br>
+			scanf("%d",&a[i][j]);//输入数据<br>
+<br>
+	for(i=0;i<wol;i++)<br>
+	{<br>
+		for(j=0;j<col;j++)<br>
+			printf("%4d",a[i][j]);<br>
+		printf("\n");<br>
+	}//输出矩阵<br>
+<br>
+	for(i=0;i<wol;i++)<br>
+	{<br>
+		for(j=k=0;j<col;j++)<br>
+			if(a[i][k]<a[i][j+1])<br>
+				k=j+1;<br>
+		printf("   ,%d,  ",a[i][k]);//行中最大的<br>
+<br>
+		for(i1=l=0;i1<wol;i1++)<br>
+			if(a[l][k]>a[i1+1][k])<br>
+				l=i1+1;<br>
+		printf("   ,%d,  ",a[l][k]);//列中最大的<br>
+		if(i==i1)<br>
+		{<br>
+			printf("第%d行第%d列的元素%d是鞍点",i1,k,a[i1][k]);<br>
+			k1++;<br>
+		}<br>
+	}<br>
+	if(k1==0)<br>
+		printf("这列数据没有鞍点");<br>
+<br>
+}<br>
+</p>
+							<h4>分班</h4>
+							<p>#include <stdio.h><br>
+main()<br>
+{<br>
+	int x;<br>
+	printf ("请输入一个数:\n");<br>
+	scanf ("%d",&x);<br>
+	switch(x)<br>
+	{<br>
+	case 2:<br>
+	case 3:printf ("age:%d,enter Lower class\n",x);break;<br>
+	case 4:printf ("age:4,enter Middle class\n");break;<br>
+	case 5:<br>
+	case 6:printf ("age:%d,enter Higher class\n",x);break;<br>
+	default:printf ("error\n");break;<br>
+	}<br>
+}<br>
+</p>
+							<h4>分钟化小时</h4>
+							<p>#include <stdio.h><br>
+main()<br>
+{<br>
+	int a,b,c;<br>
+	printf("请输入一个分钟数：\n",a);<br>
+	scanf("%d",&a);<br>
+	b=a/60;<br>
+	c=a-b*60;<br>
+	printf("%d小时%d分钟\n",b,c);<br>
+}<br>
+</p>
+							<h4>公约数——公倍数</h4>
+							<p># include <stdio.h><br>
+<br>
+int f1(int x,int y)<br>
+{ <br>
+	int a,i,k;<br>
+  	a=x<y?x:y;<br>
+  	for(i=1;i<=a;i++)<br>
+  	if (x%i==0&&y%i==0)<br>
+  	k=i;<br>
+  	return k; <br>
+}<br>
+<br>
+int f2(int x,int y)<br>
+{   <br>
+    <br>
+    return x*y/(f1(x,y));<br>
+}<br>
+<br>
+main()<br>
+{<br>
+    int x,y,m,n;<br>
+    printf("please input two numbers:\n");<br>
+    scanf("%d%d",&x,&y);<br>
+    m=f1(x,y);<br>
+    n=f2(x,y);<br>
+    printf("最大公约数=%d,最小公倍数=%d\n",m,n);<br>
+}<br></p>
+							<h4>计算字符类型数量</h4>
+							<p>#include<stdio.h><br>
+<br>
+void main()<br>
+{<br>
+	int i,latterd=0,latterx=0,number=0,space=0,others=0;<br>
+	char a[3*80];<br>
+<br>
+	printf("please input:");<br>
+	gets(a);<br>
+<br>
+	for(i=0;a[i]!='\0';i++)<br>
+	{<br>
+		if(a[i]>='A' && a[i]<='Z')<br>
+				latterd++;<br>
+		else if(a[i]>='a' && a[i]<='z')<br>
+					latterx++;<br>
+		else if(a[i]>='0' && a[i]<='9')<br>
+					number++;<br>
+		else if(a[i]==' ')<br>
+					space++;<br>
+		else<br>
+			others++;		<br>
+	}<br>
+	printf("有%d个大写字母\n",latterd);<br>
+	printf("有%d个小写字母\n",latterx);<br>
+	printf("有%d个数字\n",number);<br>
+	printf("有%d个空格\n",space);<br>
+	printf("有%d个其他字符\n",others);	<br>
+}<br></p>
+							<h4>矩阵中最大最小</h4>
+							<p>#include <stdio.h><br>
+<br>
+main()<br>
+{<br>
+	int man(int a[4][4]);<br>
+	int b[4][4];<br>
+	man(b);<br>
+}<br>
+<br>
+int man(int a[4][4]);<br>
+int man(int a[4][4])<br>
+<br>
+{<br>
+	int i,j,ma,min;<br>
+	int m=0,n=0,p=0,q=0;<br>
+<br>
+	ma=0;<br>
+	min=a[0][0];<br>
+<br>
+	printf ("请输入矩阵\n");<br>
+	for (i=0;i<4;i++)<br>
+		for (j=0;j<4;j++)<br>
+		{<br>
+			scanf ("%d",&a[i][j]);<br>
+		<br>
+		}<br>
+	for (i=0;i<4;i++)<br>
+		for (j=0;j<4;j++)<br>
+			if (ma < a[i][j])<br>
+			{<br>
+				ma = a[i][j];<br>
+				m = i;<br>
+				n = j;<br>
+			}<br>
+	for (i=0;i<4;i++)<br>
+		for (j=0;j<4;j++)<br>
+			{<br>
+				if (a[i][j]<min)<br>
+				{<br>
+					min=a[i][j];<br>
+					p=i;<br>
+					q=j;<br>
+				}<br>
+			}<br>
+	for (i=0;i<4;i++)<br>
+		for (j=0;j<4;j++)<br>
+		{<br>
+			printf("%10d",a[i][j]);<br>
+			if (j==3)<br>
+			printf ("\n");<br>
+		}<br>
+	printf ("矩阵最大为%d,下标为%d,%d.\n",ma,m,n);<br>
+	printf ("矩阵最小为%d,下标为%d,%d.\n",min,p,q);<br>
+}<br>
+</p>
+							<h4>位数</h4>
+							<p>#include <stdio.h><br>
+main()<br>
+{<br>
+	int a,b,c,d;<br>
+	printf("请输入一个三位数：\n",a);<br>
+	scanf("%d",&a);<br>
+	b=a/100;<br>
+	c=(a-b*100)/10;<br>
+	d=a-b*100-c*10;<br>
+	printf("%d,%d,%d\n",d,c,b);<br>
+}<br></p>
+							</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="index.html">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+</body>
+</html>

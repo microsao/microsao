@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li><a href="shell.html">SHELL</a></li>
+							<li class="active"><a href="#">AWK</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>Awk  工具<a href="#" title="#" class="right_container_title"  target="_blank"></a></h2></div></div>
+					<article class="row">							
+						<div class="col col-md-12">
+							<h4>awk</h4>
+							<p>#!/bin/bash<br>
+<br>
+#        read in file<br>
+#awk '{ print }' test<br>
+<br>
+<br>
+#        从文件中读入script<br>
+#awk -f inp test<br>
+<br>
+<br>
+#           判定数字<br>
+#awk 'BEGIN { print("enter a number") }<br>
+#	$1 ~ /^[0-9]+$/ { print("yes") }<br>
+#	{ print("retry!") }' -<br>
+<br>
+<br>
+#            判定文件<br>
+#awk '/^$/ { print("this is a blank line") }' test<br>
+<br>
+<br>
+#            BEGIN$END<br>
+#awk 'BEGIN { print("this is start!") }<br>
+#	END {print("this is end!")}'<br>
+<br>
+<br>
+#            -F参数<br>
+#awk -F"\t" '{ print $2 }' -<br>
+<br>
+<br>
+#          表达式<br>
+#awk 'BEGIN { x=0 } <br>
+#	/^$/ { ++x }<br>
+#	END { print x }' test<br>
+<br>
+<br>
+#               求平均数//if判断<br>
+#awk '{ total = $2+$3+$4+$5<br>
+#	avg = total/4<br>
+#	if (avg >= 90)<br>
+#	{<br>
+#		grade="A"<br>
+#	}<br>
+#	else if (avg >= 80) grade="B"<br>
+#	grade = (avg >=70) ? "C" : "D"   ##效力太强，放在第一行，不然之前改动失效<br>
+#	print $1, avg, grade }' grades <br>
+<br>
+<br>
+#        RS  ORS  FS  OFS<br>
+#awk 'BEGIN{ RS=";"; ORS="***"; FS=","; OFS="###" }<br>
+#	NR == 2 { print $0 }<br>
+#	{ print $0,NF,NR }' test<br>
+<br>
+<br>
+#       HOW TO USE OFS<br>
+#awk 'BEGIN{ FS="---"; OFS="***" }<br>
+#	{ print $0, $1, $2, $3 }' love<br>
+<br>
+<br>
+#               条件判定<br>
+#ls -l $* | awk 'BEGIN{ sum=0; file=0; print "BYTES", "\t", "FILE" }<br>
+#	$1 ~/total/ { file=-1 }<br>
+#	$1 ~/^-/ { print $5, "\t", $9 }  # == $1 ~/^-/ { printf ("%d\t%s\n",$5,$9) }<br>
+#	$1 ~/^d/ { print $5, "\t", $9, "dir" }<br>
+#	{ sum+=$5; ++file }<br>
+#	END{ print "Total: ", sum, "bytes (", file, "files)" }'<br>
+<br>
+<br>
+<br>
+#                   参数<br>
+#awk '{ print "x=", x, "\t", "y=", y, "\t", "X=", X, "\t", "Y=", Y, "\t", "z=", cmd }' x=100 y=200 "X=$1" "Y=$2" cmd=`pwd`<br>
+<br>
+<br>
+<br>
+#          ???<br>
+#awk -v x=100 '{ print "x=", x }'<br>
+<br>
+<br>
+#         搜索字母缩写并输出//后面详细信息可随意<br>
+#awk '$1==search' search=$1 srh<br>
+<br>
+<br>
+<br>
+#                        while(){} && do{}while()  for循环同理<br>
+#awk 'BEGIN{ i=1 }<br>
+#	{ while (i<=4)<br>
+#	{<br>
+#		print i<br>
+#		i++<br>
+#	}<br>
+#	{ print"------------" }<br>
+#	do {<br>
+#		print i<br>
+#		i--<br>
+#	}while(i>=0) }'<br>
+<br>
+<br>
+<br>
+#                how to use 'next'<br>
+#awk '$1 ~ /^a/ { print $0; next }<br>
+#	{ print "------" }' ne<br>
+<br>
+<br>
+<br>
+<br>
+#               how to use exit(1)<br>
+#awk '$1 ~ /^a/ { print $0; exit }<br>
+#	{ print "---------" }' ne<br>
+<br>
+#                how to use exit(2)<br>
+#awk '$1 ~ /^a/ { print $0; exit }<br>
+#        { print "---------" }<br>
+#	END{ print "end of this awk_script" }' ne<br>
+<br>
+<br>
+<br>
+<br>
+#                 关联数组 注意words后面的“-”<br>
+#awk 'BEGIN { FS="\t"; OFS="\t"; print "Enter Words" }<br>
+#	FILENAME == "words" { entry[$1] = $2; next }<br>
+#	$0 ~ /^(quit|[qQ]|exit)$/ { exit }<br>
+#	$0 != "" { if ( $0 in entry )<br>
+#			print entry[$0]<br>
+#		else <br>
+#			print $0, "notfind" }<br>
+#	{ print "quit=quit or q or Q or exit" }' words -<br>
+<br>
+<br>
+<br>
+<br>
+#             how to use split() and delete<br>
+#awk '{ z=split($0,names," "); delete names[2] }<br>
+#	{for (i=1;i<=z;i++)<br>
+#		print i, names[i]}' names<br>
+<br>
+<br>
+<br>
+<br>
+#                  多维数组   把[i,j]当成[w]来看<br>
+#awk 'BEGIN { FS=","; WIDTH=12; HIGH=12;<br>
+#	for (i=1;i<WIDTH;i++)<br>
+#		for (j=1;j<HIGH;j++)<br>
+#			bitmap[i,j]="0" }<br>
+#	{ bitmap[$1,$2]="X" }<br>
+#	END{ for (i=1;i<WIDTH;i++)<br>
+#		{<br>
+#			for (j=1;j<HIGH;j++)<br>
+#				printf ("%s",bitmap[i,j])<br>
+#			printf ("\n")<br>
+#		} }' bitmap<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+#              从SHELL传递参数<br>
+#awk 'BEGIN { for (i=0;i<ARGC;i++)<br>
+#		print ARGV[i]<br>
+#	print ARGC }' $*<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+#               从一堆数中挑选随机数<br>
+#awk -v num=$1 -v maxnum=$2 'BEGIN { <br>
+#	if (num<=0)<br>
+#		num=6<br>
+#	if (maxnum<=0)<br>
+#		maxnum=30<br>
+#	printf ("pic %d of %d\n",num,maxnum)<br>
+#	srand()<br>
+#	for (j=1;j<=num;j++)<br>
+#	{<br>
+#		do {<br>
+#			select=1+int(rand()*maxnum)<br>
+#		}while(select in pic)<br>
+#		pic[select]=select<br>
+#	}<br>
+#	for (j in pic)<br>
+#	{<br>
+#		printf ("%s ",pic[j])<br>
+#	} }'<br>
+<br>
+<br>
+<br>
+<br>
+#               how to use gsub()<br>
+#awk '{ z=gsub(/^x/,"cc",$0) }<br>
+#	{ print z, $0 }' names<br>
+<br>
+<br>
+<br>
+<br>
+#               how to use index() and substr()<br>
+#awk 'BEGIN { upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ";<br>
+#	lower="abcdefghijklmnopqrstuvwxyz" }<br>
+#	{ firstchar=substr($1,1,1)<br>
+#	if (char=index(lower,firstchar))<br>
+#		$1=substr(upper,char,1) substr($1,2)<br>
+#	print $0 }' -<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+#<br>
+file=`ls /root/Desktop/1233`<br>
+for i in $file<br>
+do<br>
+j=/root/Desktop/1233/$i<br>
+echo "$j"<br>
+w=/root/Desktop/$i<br>
+awk 'BEGIN { ORS="<br>\n" }<br>
+	{ print $0 >> "'$w'" }<br>
+	END{print "yes"}' $j<br>
+done           <br>
+</p>			
+							</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="index.html">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+</body>
+</html>

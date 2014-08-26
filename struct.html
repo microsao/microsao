@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li><a href="del_char.html">删除字符</a></li>
+							<li><a href="mem.html">模拟内存管理</a></li>
+							<li><a href="del_point.html">删除节点</a></li>
+							<li><a href="linux_c.html">Linux C编程</a></li>
+							<li><a href="move_num.html">移动数字</a></li>
+							<li><a href="os.html">操作系统相关</a></li>
+							<li><a href="point_file.html">指针-文件</a></li>
+							<li class="active"><a href="#">结构体排序</a></li>
+							<li><a href="xxx.html">杂七杂八</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>结构体排序<a href="#" title="#" class="right_container_title"  target="_blank"></a></h2></div></div>
+					<article class="row">							
+						<div class="col col-md-12">
+									
+							<p>#include <stdio.h><br>
+<br>
+#define N 3<br>
+<br>
+struct<br>
+{<br>
+	int num;<br>
+	float math;<br>
+	float chinese;<br>
+	float english;<br>
+	float sum;<br>
+}st[N],man;<br>
+<br>
+int main()<br>
+{<br>
+	int i,j,k;<br>
+	for (i=0;i<N;i++)<br>
+	{<br>
+		printf ("please input student%d's num math chinese english score\n",i+1);<br>
+		scanf ("%d%f%f%f",&st[i].num,&st[i].math,&st[i].chinese,&st[i].english);<br>
+		st[i].sum=st[i].math+st[i].chinese+st[i].english;<br>
+	}<br>
+	for (i=0;i<N-1;i++)<br>
+	{<br>
+		k=i;<br>
+		for (j=i+1;j<N;j++)<br>
+		{<br>
+			if (st[j].sum>st[k].sum)<br>
+			{<br>
+				k=j;<br>
+				man=st[k];<br>
+				st[k]=st[i];<br>
+				st[i]=man;<br>
+			}<br>
+			else if (st[j].sum=st[k].sum)<br>
+			{<br>
+				if (st[j].english>st[k].english)<br>
+	                        {<br>
+        	                        k=j;<br>
+                	                man=st[k];<br>
+                       		        st[k]=st[i];<br>
+                                	st[i]=man;<br>
+ <br>
+				}<br>
+			}<br>
+		}<br>
+	}<br>
+	printf ("num   math  chinese english sum\n");<br>
+	for (i=0;i<N;i++)<br>
+	{<br>
+		printf ("%-6d%-4.2f%-6.2f%-6.2f%-4.2f\n",st[i].num,st[i].math,st[i].chinese,st[i].english,st[i].sum);<br>
+	}<br>
+	return 0;<br>
+}<br></p>								
+							</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="index.html">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+</body>
+</html>

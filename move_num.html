@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li><a href="del_char.html">删除字符</a></li>
+							<li><a href="mem.html">模拟内存管理</a></li>
+							<li><a href="del_point.html">删除节点</a></li>
+							<li><a href="linux_c.html">Linux C编程</a></li>
+							<li class="active"><a href="#">移动数字</a></li>
+							<li><a href="os.html">操作系统相关</a></li>
+							<li><a href="point_file.html">指针-文件</a></li>
+							<li><a href="struct.html">结构体排序</a></li>
+							<li><a href="xxx.html">杂七杂八</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>move_num<a href="#" title="#" class="right_container_title"  target="_blank"></a></h2></div></div>
+					<article class="row">							
+						<div class="col col-md-12">		
+							<p>#include <stdio.h><br>
+<br>
+int main()<br>
+{<br>
+	int a[]={1,2,3,4,5,6,7,8,9,10};<br>
+	int b[10];<br>
+	int i;<br>
+	int *p=a;<br>
+	int *q=b;<br>
+	int m;<br>
+	printf ("a[10]=1,2,3,4,5,6,7,8,9,10\n");<br>
+	printf ("please input the number what you want to move:\n");<br>
+	scanf ("%d",&m);<br>
+	printf ("output:\n");<br>
+	for (i=0,q=b+m;i<10-m;i++,p++,q++)<br>
+		*q=*p;<br>
+	for (i=0,q=b;i<m;i++,p++,q++)<br>
+		*q=*p;<br>
+	q=b;<br>
+	for (i=0;i<10;i++,q++)<br>
+	printf ("%-4d",*q);<br>
+	printf ("\n");<br>
+	return 0;<br>
+}<br>
+</p>								
+							</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="index.html">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+</body>
+</html>

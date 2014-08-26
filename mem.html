@@ -1,73 +1,493 @@
+<!DOCTYPE html>
 <html>
-<style type="text/css">
-a {
-	font-size: xx-small;
-	color: #F00;
-}
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
-body,td,th {
-	font-size: 24px;
-	color: #F36;
-}
-body {
-	background-color: #FFF;
-	background: #151515 url("images/11.jpg") 0 0;
-	background-repeat: no-repeat;
-	background-size: cover;
-	font-size: 40pt;
-	font-family: "仿宋";
-	font-style: italic;
-	font-weight: bold;
-	text-align:left;
-}
-</style>
-   <img id="imgbg" width="100%" height="100%" style="right:0 ; bottom: 0;
-        position: absolute; top: 0; left: 0; z-index: -1" />
-<body>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
 
-<h1 align="center"><em><strong> Love Story</strong></em></h1>
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li><a href="del_char.html">删除字符</a></li>
+							<li class="active"><a href="#">模拟内存管理</a></li>
+							<li><a href="del_point.html">删除节点</a></li>
+							<li><a href="linux_c.html">Linux C编程</a></li>
+							<li><a href="move_num.html">移动数字</a></li>
+							<li><a href="os.html">操作系统相关</a></li>
+							<li><a href="point_file.html">指针-文件</a></li>
+							<li><a href="struct.html">结构体排序</a></li>
+							<li><a href="xxx.html">杂七杂八</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>About Botany Them<a href="#" title="#" class="right_container_title"  target="_blank">e</a></h2></div></div>
+					<article class="row">							
+						<div class="col col-md-12">
+							<h4>Class aptent taciti</h4>
+							<p>#include <stdio.h><br>
+#include <stdlib.h><br>
 
-<p align="center">my heart world.</p>
-<hr />
+#define PROCESS_NAME_LEN 32   /*进程名长度*/<br>
+#define MIN_SLICE    10             /*最小碎片的大小*/<br>
+#define DEFAULT_MEM_SIZE 1024     /*内存大小*/<br>
+#define DEFAULT_MEM_START 0       /*起始位置*/<br>
+/* 内存分配算法 */<br>
+#define MA_FF 1<br>
+#define MA_BF 2<br>
+#define MA_WF 3<br>
+struct allocated_block* find_process(int fpid);<br>
+<br>
+<br>
+<br>
+/*描<述每一个空闲块的数据结构*/<br>
+struct free_block_type{<br>
+    int size;<br>
+    int start_addr;<br>
+    struct free_block_type *next;<br>
+};  <br>
 
- <p align="center">记得第一次看到你那是大二快期末，利鹏带着你来到实验室的门口。当时看到你，我感觉很清新，又带着点羞涩，忍不住多看了一眼。
-</p>
-       <p><img src="images/1.png" width="100%" height="100%" hspace="0" vspace="0" border="0" /></p>
-       
- <p align="center">但是，就因为多看了的这一眼，这个印记刻在脑海里挥之不去了，在次之后，总是忍不会住的想往你那个方向瞅瞅，久而久之，就对你产生了一种感觉。我意识到，我已经喜欢上你了。
-</p>
-       <p><img src="images/2.png" width="100%" height="100%" hspace="0" vspace="0" border="0" /></p>
-       
-  <p align="center">看到你的一颦一笑，我就像打了兴奋剂一样不由得心跳加速。尤其是在偶遇的时候，远远的看见你走过来，既兴奋，又害怕，兴奋呀又可以见到你，害怕不知道说些什么，最终只能憋出个hi...。然后兴奋着懊悔自己的语死早。
-</p>
-       <p><img src="images/3.png" width="100%" height="100%" hspace="0" vspace="0" border="0" /></p>
-     
-        <p align="center">机智的利鹏看出了些端倪，我也想从他那多了解了解关于你的事，也就跟他坦白了，拜托他出出主意，利鹏说他帮我问问。之后利鹏劝我放弃，我也就猜到个八九不离十。躺在床上，想着利鹏跟我说的话，想着自己真的早放弃么，想着今后该怎么办，就这么呆呆的想了一晚上。
-</p>
-       <p><img src="images/4.png" width="100%" height="100%" hspace="0" vspace="0" border="0" /></p>
-	    <p align="center">喜欢一个人，就算收不到回报也无所谓。能够看到她很开心就足够了。实验室分组的时候我便自告奋勇的申请带你，这也是我所力所能及能够帮到你的事了。
-</p>
-       <p><img src="images/5.png" width="100%" height="100%" hspace="80" vspace="0" border="0" /></p>
-	    <p align="center">大三的时候我感觉到想有更进一步的发展很难，寒假的时候便劝自己放弃，qq被盗后强迫自己不联系你，想让时间冲淡这份心中的这份感情。但事实是我想多了，当我再次看到你的时候，我感觉我是多么的逗比
-</p>
-       <p><img src="images/6.png" width="100%" height="100%" hspace="0" vspace="0" border="0" /></p>
-	    <p align="center">马上都要大四了，我还是和当初那样不善言辞，大四意味着将要离开，把话说出来，害怕最终做普通朋友都很尴尬，我到底是在畏惧些什么。再不说出心里想说的话，那将是多么大的遗憾，所以我选择在这个日子，这种用方式，向你表达心中的情感。
-</p>
-       <p><img src="images/7.png" width="100%" height="100%" hspace="0" vspace="0" border="0" /></p>
-	    <p align="center">你愿意陪我一起过七夕节么？
-</p>
-       <p><img src="images/8.png" width="100%" height="100%" hspace="0" vspace="0" border="0" /></p>
-       
+/*指向内存中空闲块链表的首指针*/<br>
+struct free_block_type *free_block;<br>
+
+/*每个进程分配到的内存块的描述*/<br>
+struct allocated_block{<br>
+    	int pid;    <br>
+	int size;<br>
+    	int start_addr;<br>
+    	char process_name[PROCESS_NAME_LEN];<br>
+    	struct allocated_block *next;<br>
+    };<br>
+
+
+/*进程分配内存块链表的首指针*/<br>
+struct allocated_block *allocated_block_head = NULL;<br>
+
+
+int mem_size=DEFAULT_MEM_SIZE; /*内存大小*/<br>
+int ma_algorithm = MA_FF;           /*当前分配算法*/   //(默认)<br>
+static int pid = 0;                                      /*初始pid*/<br>
+int flag = 0;                             /*设置内存大小标志*/<br>
+<br>
+/*初始化空闲块，默认为一块，可以指定大小及起始地址*/<br>
+struct free_block_type* init_free_block(int mem_size){<br>
+    struct free_block_type *fb;<br>
+<br>
+    fb=(struct free_block_type *)malloc(sizeof(struct free_block_type));<br>
+    if(fb==NULL){<br>
+        printf("No mem\n");<br>
+        return NULL;<br>
+        }<br>
+    fb->size = mem_size;<br>
+    fb->start_addr = DEFAULT_MEM_START;<br>
+    fb->next = NULL;<br>
+    return fb;<br>
+}<br>
+
+/*显示菜单*/<br>
+display_menu(){<br>
+    printf("\n");<br>
+    printf("				1 - Set memory size (default=%d)\n\n", DEFAULT_MEM_SIZE);<br>
+    printf("				2 - Select memory allocation algorithm\n\n");<br>
+    printf("				3 - New process \n\n");<br>
+    printf("				4 - Terminate a process \n\n");<br>
+    printf("				5 - Display memory usage \n\n");<br>
+    printf("					0 - Exit\n\n\n");<br>
+}<br>
+<br>
+/*设置内存的大小*/<br>
+set_mem_size(){<br>
+    int size;<br>
+    if(flag!=0){  //防止重复设置<br>
+        printf("Cannot set memory size again\n");<br>
+        return 0;<br>
+        }<br>
+    printf("Total memory size =");<br>
+    scanf("%d", &size);<br>
+    if(size>0) {<br>
+        mem_size = size;<br>
+        free_block->size = mem_size;<br>
+        }<br>
+    flag=1;<br>
+	printf ("set men_size complete\n");<br>
+	  return 1;<br>
+    }<br>
+<br>
+/* 设置当前的分配算法 */<br>
+set_algorithm(){<br>
+    int algorithm;<br>
+    printf("\t1 - First Fit\n");<br>
+    printf("\t2 - Best Fit \n");<br>
+    printf("\t3 - Worst Fit \n");<br>
+    scanf("%d", &algorithm);<br>
+	if(algorithm>=1 && algorithm <=3)<br>
+	{  <br>
+              ma_algorithm=algorithm;<br>
+	}<br>
+	printf ("set algorithm complete\n");<br>
+	//按指定算法重新排列空闲区链表<br>
+	//rearrange(ma_algorithm); <br>
+}<br>
+
+/*按指定的算法整理内存空闲块链表*/<br>
+rearrange(int algorithm){<br>
+    switch(algorithm){<br>
+        case MA_FF:  rearrange_FF(); break;<br>
+        case MA_BF:  rearrange_BF(); break;<br>
+        case MA_WF: rearrange_WF(); break;<br>
+        }<br>
+}<br>
+
+/*按FF算法重新整理内存空闲块链表*/<br>
+rearrange_FF(){   <br>
+	//请自行补充<br>
+	printf ("start FF !\n");<br>
+	printf ("end FF ! \n ");<br>
+	}<br>
+	///*按BF算法重新整理内存空闲块链表*/<br>
+rearrange_BF(){<br>
+	struct free_block_type 	*q = free_block;<br>
+	struct free_block_type 	*p = q->next;<br>
+	struct free_block_type 	temp;<br>
+<br>
+	printf ("start WF ! \n");<br>
+<br>
+	for (p = free_block; p; p = p->next)<br> 
+		for (q = p->next; q; q = q->next) <br>
+			if (p->size > q->size) {<br>
+				temp = *q;<br>
+				*q = *p;<br>
+				*p = temp;<br>
+				p->next = q->next;<br>
+				q->next = temp.next;<br>
+			}<br>
+
+}<br>
+	//	/*按WF算法重新整理内存空闲块链表*/<br>
+rearrange_WF(){ <br>
+	struct free_block_type 	*q = free_block;<br>
+	struct free_block_type 	*p = q->next;<br>
+	struct free_block_type 	temp;<br>
+<br>
+	printf ("start WF ! \n");<br>
+<br>
+	for (p = free_block; p; p = p->next)<br> 
+		for (q = p->next; q; q = q->next) <br>
+			if (p->size < q->size) {<br>
+				temp = *q;<br>
+				*q = *p;<br>
+				*p = temp;<br>
+				p->next = q->next;<br>
+				q->next = temp.next;<br>
+			}<br>
+
+#if 0<br>
+	while (pre)<br> 
+	{<br>
+		work = free_block;<br> 
+		while (aft) <br>
+		{<br>
+			if (work->size < (work->next)->size )<br>
+			{<br>
+				printf ("***\n");<br>
+				swap->size = (work->next)->size;<br>
+				swap->start_addr = (work ->next)->start_addr;<br>
+				(work ->next)->size = work ->size;<br>
+				(work ->next)->start_addr = work->start_addr;<br>
+				work ->size = swap ->size;<br>
+				work ->start_addr = swap ->start_addr;<br>
+				printf ("****\n");<br>
+
+			work = work ->next;<br>
+			aft = aft ->next;<br>
+			/*<br>
+			if (work->next == NULL)<br>
+			{<br>
+				break;<br>
+			}<br>
+			*/<br>
+		}<br>
+		pre = pre->next;<br> 
+	}<br>
+#endif<br>
+	printf ("end WF !\n");<br>
+}<br>
+new_process(){<br>
+    struct allocated_block *ab;<br>
+    int size;    <br>
+    int ret;<br>
+    ab=(struct allocated_block *)malloc(sizeof(struct allocated_block));<br>
+    if(!ab)<br>
+    { <br>
+	exit(-5);<br>
+    }<br>
+    ab->next = NULL;<br>
+    pid++;<br>
+    sprintf(ab->process_name, "PROCESS-%02d", pid);<br>
+    ab->pid = pid;<br>    
+    printf("Memory for %s:", ab->process_name);<br>
+    scanf("%d", &size);<br>
+    if(size>0)<br>
+    { <br>
+	ab->size=size;<br>
+    }<br>
+    ret = allocate_mem(ab);  /* 从空闲区分配内存，ret==1表示分配ok*/<br>
+
+/*如果此时allocated_block_head尚未赋值，则赋值*/<br>
+    if((ret==1) &&(allocated_block_head == NULL)){ <br>
+        allocated_block_head=ab;<br>
+        return 1;        }<br>
+    /*分配成功，将该已分配块的描述插入已分配链表*/<br>
+    else if (ret==1) {<br>
+        ab->next=allocated_block_head;<br>
+        allocated_block_head=ab;<br>
+        return 2;        }<br>
+    else if(ret==-1){ /*分配不成功*/<br>
+        printf("Allocation fail\n");<br>
+        free(ab);<br>
+        return -1;   <br>    
+     }<br>
+    return 3;<br>
+    }<br>
+
+/*分配内存模块*/<br>
+int allocate_mem(struct allocated_block *ab){<br>
+    struct free_block_type *fbt, *pre ,*swap ,*bfpre;<br>
+    int request_size=ab->size;<br>
+    fbt = pre = free_block;<br>
+	if (pre->next == NULL)<br>
+	{<br>
+		if ((pre->size - request_size) >= 0)<br>
+		{<br>
+			pre->size = pre->size - request_size;<br>
+			ab->start_addr = pre->start_addr;<br>
+			pre->start_addr= pre->start_addr +request_size;<br>
+			printf ("distribute complete\n");<br>
+/*<br>
+			if (pre->size == 0)<br>
+			{<br>
+				free(pre);<br>
+				free_block = NULL;<br>
+			}<br>
+*/<br>
+			return 1;<br>
+		}<br>
+	}<br>
+	else<br>
+	{<br>
+		while (pre)<br>
+		{<br>
+			if (pre->size >= request_size)<br>
+			{<br>
+				
+				pre->size = pre->size -request_size;<br>
+				ab->start_addr = pre->start_addr;<br>
+				pre->start_addr= pre->start_addr +request_size;<br>
+				if (pre->size == 0)<br>
+				{<br>
+					if (pre == free_block)<br>
+					{<br>
+						swap= pre;<br>
+						pre=pre->next;<br>
+						free(swap);<br>
+					}<br>
+					else<br>
+					{<br>
+						bfpre->next = pre->next;<br>
+						swap = pre;<br>
+						free(swap);<br>
+					}<br>
+				}<br>
+				printf ("distribute complete\n");<br>
+				return 1;<br>
+			}<br>
+			bfpre= pre;<br>
+			pre=pre->next;<br>
+		}<br>
+	}<br>
+	rearrange(ma_algorithm);<br>
+}<br>
+
+
+
+/*删除进程，归还分配的存储空间，并删除描述该进程内存分配的节点*/<br>
+void kill_process(){<br>
+    struct allocated_block *ab;<br>
+    int pid;<br>
+    printf("Kill Process, pid=");<br>
+    scanf("%d", &pid);<br>
+    ab=find_process(pid);<br>
+	printf ("killing process %d!\n",ab->pid);<br>
+    if(ab!=NULL){<br>
+	printf ("begin free(1)\n");<br>
+        free_mem(ab); /*释放ab所表示的分配区*/<br>
+	printf ("begin free(2)\n");<br>
+        dispose(ab);  /*释放ab数据结构节点*/<br>
+        }<br>
+}<br>
+struct allocated_block* find_process(int fpid)<br>
+{<br>
+	struct allocated_block *ab;<br>
+	int i = 1;<br>
+	ab = allocated_block_head;<br>
+	while (ab)<br>
+	{<br>
+		if (ab->pid == fpid)<br>
+		{<br>
+			printf ("process: %d \n",ab->pid);<br>
+			i = 0;<br>
+			printf ("find complete\n");<br>
+			return ab;<br>
+		}<br>
+		ab = ab->next;<br>
+	}<br>
+	if (i == 1)<br>
+	{<br>
+		printf ("have no that process!\n");<br>
+		return NULL;<br>
+	}<br>
+}<br>
+
+/*将ab所表示的已分配区归还，并进行可能的合并*/<br>
+int free_mem(struct allocated_block *ab){<br>
+ //   int algorithm = ma_algorithm; <br>
+    struct free_block_type *fbt, *pre, *work ,*swap ,*bfpre;<br> 
+	pre = free_block; <br>
+   fbt=(struct free_block_type*) malloc(sizeof(struct free_block_type));<br> 
+    if(!fbt) return -1;<br>
+	fbt->size = ab->size;<br>
+	fbt->start_addr = ab->start_addr;<br>
+	while (pre) //插入<br>
+	{<br>
+		if (pre->start_addr > fbt->start_addr)<br>
+		{<br>
+			if (pre == free_block)<br>
+			{<br>
+				fbt->next = pre;<br>
+				free_block = fbt;<br>
+				break;<br>
+			}<br>
+			else<br>
+			{<br>
+				fbt->next = pre;<br>
+				bfpre->next = fbt;<br>
+				break;<br>
+			}<br>
+		}<br>
+		bfpre=pre;<br>
+		pre=pre->next;<br>
+	}<br>
+
+	for (work = free_block; work->next; ) {<br>
+<br>
+		if ((work->start_addr + work->size) == ((work->next)->start_addr)) {<br>
+<br>
+			swap=work->next;<br>
+			work->size = work->size + swap->size;<br>
+			work->next= swap->next;<br>
+			free(swap);<br>
+			continue;<br>
+		}<br>
+		work = work->next;<br>
+	}<br>
+
+//	hebing();<br>
+	rearrange(ma_algorithm);<br>
+return 1;<br>
+}<br>
+<br>
+/*释放ab数据结构节点*/<br>
+int dispose(struct allocated_block *free_ab){<br>
+    struct allocated_block *pre, *ab;<br>
+   if(free_ab == allocated_block_head) { /*如果要释放第一个节点*/<br>
+     allocated_block_head = allocated_block_head->next;<br>
+        free(free_ab);<br>
+        return 1;<br>
+        }<br>
+    pre = allocated_block_head;<br>  
+    ab = allocated_block_head->next;<br>
+    while(ab!=free_ab){ pre = ab;  ab = ab->next; }<br>
+    pre->next = ab->next;<br>
+    free(ab);<br>
+    return 2;<br>
+   }<br>
+
+/* 显示当前内存的使用情况，包括空闲区的情况和已经分配的情况 */<br>
+display_mem_usage(){<br>
+    struct free_block_type *fbt=free_block;<br>
+    struct allocated_block *ab=allocated_block_head;<br>
+    if(fbt==NULL) return(-1);<br>
+    printf("----------------------------------------------------------\n");<br>
+
+    /* 显示空闲区 */<br>
+    printf("Free Memory:\n");<br>
+    printf("%20s %20s\n", "      start_addr", "       size");<br>
+    while(fbt!=NULL){<br>
+        printf("%20d %20d\n", fbt->start_addr, fbt->size);<br>
+        fbt=fbt->next;<br>
+        }<br>
+/* 显示已分配区 */<br>
+    printf("\nUsed Memory:\n");<br>
+    printf("%10s %20s %10s %10s\n", "PID", "ProcessName", "start_addr", " size");<br>
+    while(ab!=NULL){<br>
+        printf("%10d %20s %10d %10d\n", ab->pid, ab->process_name, ab->start_addr, ab->size);<br>
+        ab=ab->next;<br>
+        }<br>
+    printf("----------------------------------------------------------\n");<br>
+    return 0;<br>
+    }<br>
+
+main(){<br>
+        char choice,ch;<br>
+        pid=0;<br>
+        free_block = init_free_block(mem_size); //初始化空闲区<br>
+        while(1) {<br>
+	//fflush(stdin);<br>
+        display_menu(); //显示菜单<br>
+	scanf ("%c",&choice);<br>
+        //ch=getchar();       //获取用户输入<br>
+        switch(choice){<br>
+        case '1': set_mem_size(); break;        //设置内存大小<br>
+        case '2': set_algorithm();flag=1; break;//设置算法<br>
+        case '3': new_process(); flag=1; break;//创建新进程<br>
+        case '4': kill_process(); flag=1;   break;//删除进程<br>
+        case '5': display_mem_usage();    flag=1; break;       //显示内存使用<br>
+        case '0': //do_exit(); <br>
+		exit(0);   //释放链表并退出<br>
+        default: break;      }    }<br>
+}<br>
+
+</p>								
+						</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://www.baidu.com/">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
 </body>
 </html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li><a href="del_char.html">删除字符</a></li>
+							<li><a href="mem.html">模拟内存管理</a></li>
+							<li><a href="del_point.html">删除节点</a></li>
+							<li><a href="linux_c.html">Linux C编程</a></li>
+							<li><a href="move_num.html">移动数字</a></li>
+							<li><a href="os.html">操作系统相关</a></li>
+							<li class="active"><a href="#">指针-文件</a></li>
+							<li><a href="struct.html">结构体排序</a></li>
+							<li><a href="xxx.html">杂七杂八</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>point_file<a href="#" title="#" class="right_container_title"  target="_blank"></a></h2></div></div>
+					<article class="row">
+						<div class="col col-md-12">		
+							<p>#include<stdio.h>
+<br>
+#include<conio.h>
+<br>
+#include<string.h>
+<br>
+#include<stdlib.h>
+<br>
+
+<br>
+typedef struct student
+<br>
+{
+<br>
+	int num;
+<br>
+	char name[10];
+<br>
+	int score[4];
+<br>
+	float ave;
+<br>
+	struct student * next;
+<br>
+}stu;
+<br>
+
+<br>
+stu * makeLink(void);
+<br>
+int saveFile(stu * head);
+<br>
+int average();
+<br>
+int calculator(void);
+<br>
+int insert(void);
+<br>
+void sort(stu *head);
+<br>
+
+<br>
+void sort(stu *h)
+<br>
+{
+<br>
+	stu *p, *q, s, *r;
+<br>
+
+<br>
+	for(p=h; p; p=p->next)
+<br>
+		for(q=p->next; q; q=q->next)
+<br>
+			if(p->ave < q->ave)
+<br>
+			{
+<br>
+				s = *p;
+<br>
+				*p = *q;
+<br>
+				*q = s;
+<br>
+				r = p->next;
+<br>
+				p->next = q->next;
+<br>
+				q->next = r;
+<br>
+			}
+<br>
+}
+<br>
+int insert(void)
+<br>
+{
+<br>
+	FILE * fp1, * fp2;
+<br>
+	stu s, t;
+<br>
+	char name[30], name1[30];
+<br>
+	int k=0;
+<br>
+
+<br>
+	printf("please input new student message :\n");
+<br>
+	scanf("%d %s %d %d %d\n", &t.num, t.name, &t.score[0], &t.score[1], &t.score[2]);
+<br>
+	t.score[3] = t.score[0] + t.score[1] + t.score[2];
+<br>
+	t.ave = (float)(t.score[3]/3.0);
+<br>
+
+<br>
+	printf("please input will open file name:");
+<br>
+	gets(name);
+<br>
+	printf("please input will save file name:");
+<br>
+	gets(name1);
+<br>
+
+<br>
+	if((fp2 = fopen(name1, "wt")) == NULL)
+<br>
+	{
+<br>
+		printf("file open fail !!");
+<br>
+		return -1;
+<br>
+	}
+<br>
+	if((fp1 = fopen(name, "rt")) == NULL)
+<br>
+	{
+<br>
+		printf("file open fail !!");
+<br>
+		return -1;
+<br>
+	}
+<br>
+
+<br>
+	while(!feof(fp1))
+<br>
+	{
+<br>
+		fscanf(fp1, "%d %s %d %d %d %d %f\n", &s.num, s.name, &s.score[0], &s.score[1], &s.score[2], &s.score[3], &s.ave);
+<br>
+		if(s.ave < t.ave && k==0)
+<br>
+		{
+<br>
+			fprintf(fp2, "%-5d %-8s %-5d %-5d %-5d %-5d %-5.2f\n", t.num, t.name, t.score[0], t.score[1], t.score[2], t.score[3], t.ave);
+<br>
+			k++;
+<br>
+		}
+<br>
+		fprintf(fp2, "%-5d %-8s %-5d %-5d %-5d %-5d %-5.2f\n", s.num, s.name, s.score[0], s.score[1], s.score[2], s.score[3], s.ave);
+<br>
+	}
+<br>
+	if(k == 0)
+<br>
+		fprintf(fp2, "%-5d %-8s %-5d %-5d %-5d %-5d %-5.2f\n", t.num, t.name, t.score[0], t.score[1], t.score[2], t.score[3], t.ave);
+<br>
+
+<br>
+	fclose(fp1);
+<br>
+	fclose(fp2);
+<br>
+
+<br>
+	return 1;
+<br>
+}
+<br>
+int calculator(void)
+<br>
+{
+<br>
+	FILE * fp1, * fp2;
+<br>
+	stu s;
+<br>
+	char name[30], name1[30];
+<br>
+
+<br>
+	printf("please input will open file name:");
+<br>
+	gets(name);
+<br>
+	printf("please input will save file name:");
+<br>
+	gets(name1);
+<br>
+
+<br>
+	if((fp2 = fopen(name1, "wt")) == NULL)
+<br>
+	{
+<br>
+		printf("file open fail !!");
+<br>
+		return -1;
+<br>
+	}
+<br>
+	if((fp1 = fopen(name, "rt")) == NULL)
+<br>
+	{
+<br>
+		printf("file open fail !!");
+<br>
+		return -1;
+<br>
+	}
+<br>
+	while(!feof(fp1))
+<br>
+	{
+<br>
+		fscanf(fp1, "%d %s %d %d %d %f\n", &s.num, s.name, &s.score[0], &s.score[1], &s.score[2], &s.ave);
+<br>
+		s.score[3] = s.score[0] + s.score[1] + s.score[2];
+<br>
+		fprintf(fp2, "%-5d %-8s %-5d %-5d %-5d %-5d %-5.2f\n", s.num, s.name, s.score[0], s.score[1], s.score[2], s.score[3], s.ave);
+<br>
+	}
+<br>
+	fclose(fp1);
+<br>
+	fclose(fp2);
+<br>
+
+<br>
+	return 1;
+<br>
+}
+<br>
+int average()
+<br>
+{
+<br>
+	FILE * fp;
+<br>
+	stu s;
+<br>
+	int k=0;
+<br>
+	char name[30];
+<br>
+
+<br>
+	printf("please input file name:");
+<br>
+	gets(name);
+<br>
+
+<br>
+	if((fp = fopen(name, "rt")) == NULL)
+<br>
+	{
+<br>
+		printf("file open fail !!");
+<br>
+		return -1;
+<br>
+	}
+<br>
+	while(!feof(fp))
+<br>
+	{
+<br>
+		fscanf(fp, "%d %s %d %d %d %f\n", &s.num, s.name, &s.score[0], &s.score[1], &s.score[2], &s.ave);
+<br>
+		if(s.ave >= 90)
+<br>
+			k++;
+<br>
+	}
+<br>
+	fclose(fp);
+<br>
+	printf("have %d student average more than 90 score", k);
+<br>
+
+<br>
+	return k;
+<br>
+}
+<br>
+int saveFile(stu * h)
+<br>
+{
+<br>
+	stu *p;
+<br>
+	FILE *fp;
+<br>
+	char name[30];
+<br>
+
+<br>
+	printf("please input file name:");
+<br>
+	getchar();
+<br>
+	gets(name);
+<br>
+
+<br>
+	if((fp = fopen(name, "wt")) == NULL)
+<br>
+	{
+<br>
+		printf("file open fail !!");
+<br>
+		return 0;
+<br>
+	}
+<br>
+	for(p = h; p; p = p->next)
+<br>
+		fprintf(fp, "%-5d %-8s %-5d %-5d %-5d %-5.2f\n", p->num, p->name, p->score[0], p->score[1], p->score[2], p->ave);
+<br>
+	fclose(fp);
+<br>
+	printf("save file succed !!\n");
+<br>
+
+<br>
+	return 1;
+<br>
+}
+<br>
+stu * makeLink(void)
+<br>
+{
+<br>
+	stu *h=NULL, *p, *q, s;
+<br>
+	int i=0;
+<br>
+
+<br>
+	printf("please input %dth student's message:\n", ++i);
+<br>
+	scanf("%d", &s.num);
+<br>
+
+<br>
+	while(s.num > 0)
+<br>
+	{
+<br>
+		scanf("%s %d %d %d", s.name, &s.score[0], &s.score[1], &s.score[2]);
+<br>
+		p = (stu *)malloc(sizeof(stu));
+<br>
+		p -> num = s.num;
+<br>
+		strcpy(p ->name, s.name);
+<br>
+		p -> score[0] = s.score[0];
+<br>
+		p -> score[1] = s.score[1];
+<br>
+		p -> score[2] = s.score[2];
+<br>
+		p -> ave = (float)((p -> score[0] + p -> score[1] + p -> score[2])/3.0);
+<br>
+		p -> next = NULL;
+<br>
+
+<br>
+		if(h == NULL)
+<br>
+			h = p;
+<br>
+		else
+<br>
+			q -> next = p;
+<br>
+		q = p;
+<br>
+		
+<br>
+		printf("please input %dth student's message:\n", ++i);
+<br>
+		scanf("%d", &s.num);
+<br>
+	}
+<br>
+	sort(h);
+<br>
+
+<br>
+	return h;
+<br>
+}
+<br>
+void main(void)
+<br>
+{
+<br>
+	stu *h;
+<br>
+
+<br>
+	h = makeLink();
+<br>
+	saveFile(h);
+<br>
+//	average();
+<br>
+	calculator();
+<br>
+	insert();
+<br>
+
+<br>
+	getch();
+<br>
+}<br>
+</p>								
+							</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="index.html">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+</body>
+</html>

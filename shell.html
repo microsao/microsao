@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li class="active"><a href="#">SHELL</a></li>
+							<li><a href="awk.html">AWK</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>SHELL<a href="#" title="#" class="right_container_title"  target="_blank"></a></h2></div></div>
+					<article class="row">							
+						<div class="col col-md-12">			
+							<p>#!/bin/bash<br>
+<br>
+XUXIAO_NAME="xu xiao"<br>
+XUXIAO_CITY="gui zhou"<br>
+XUXIAO_EMAIL="microsao540@gmail.com"<br>
+<br>
+WUGUANGYU_NAME="wu guang yu"<br>
+WUGUANGYU_CITY="xi'an"<br>
+WUGUANGYU_EMAIL="289992451@qq.com"<br>
+<br>
+ZHANGLIPENG_NAME="zhang li peng"<br>
+ZHANGLIPENG_CITY="bao ji"<br>
+ZHANGLIPENG_EMAIL="820221185@qq.com"<br>
+<br>
+HUANGHAIYU_NAME="huang hai yu"<br>
+HUANGHAIYU_CITY="shang luo"<br>
+HUANGHAIYU_EMAIL="1016814199@qq.com"<br>
+<br>
+echo "Select who you wanna know!"<br>
+select one in XUXIAO WUGUANGYU ZHANGLIPENG HUANGHAIYU<br>
+do<br>
+	echo what do you wanna know about ${one}<br>
+	select data in NAME CITY EMAIL<br>
+	do<br>
+		other=${one}_${data}<br>
+		echo "${one}'s${data} is ${!other}"<br>
+	break<br>
+	done<br>
+	break<br>
+done<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+${EDITOR:-`which "$1"`} "$2"<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+hanshu()<br>
+{<br>
+	for xx<br>
+	do<br>
+		echo "let me teach you what is true pleasure huh $xx"<br>
+	done<br>
+}<br>
+hanshu xx hh mm nn<br>
+hanshu 11 22 33<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+if [ ! -r "$1" ]<br>
+then<br>
+	echo "$1 is not readable!"<br>
+	echo "quitting"<br>
+	exit 1<br>
+else <br>
+	cat $1<br>
+fi<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+cat "$1"<br>
+if [ "$?" -ne "0" ]<br>
+then<br>
+echo "ERROR : READING $1 FAILED."<br>
+fi<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+echo -n "Enter a size in KB:"<br>
+read kb<br>
+bytes=`expr $kb \* 1024`<br>
+mb=`expr $kb / 1024`<br>
+echo ${kb}KB is ${bytes}BYTES is ${mb}MB.<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+x="hello world"<br>
+y=${#x}<br>
+<br>
+echo $y<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+x="hello world"<br>
+y=3<br>
+<br>
+let z=${x}+${y}<br>
+<br>
+echo $z .<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+ls -R &<br>
+sleep 10<br>
+strace -p $!<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+UPHOST=/root/Desktop/shell/uphost<br>
+DOWNHOST=/root/Desktop/shell/downhost<br>
+<br>
+fip="192.168.199"<br>
+for ip in `seq 1 254`<br>
+do<br>
+	echo "pinging ${fip}.${ip}..."<br>
+	ping -c1 -w1 ${fip}.${ip} > /dev/null 2>&1<br>
+	if [ "$?" -eq "0" ]; then<br>
+		echo "ok"<br>
+		echo "${fip}.${ip}" >> ${UPHOST}<br>
+	else<br>
+		echo "failed"<br>
+		echo "${fip}.${ip}" >> ${DOWNHOST}<br>
+	fi<br>
+done<br>
+<br>
+<br>
+<br>
+<br>
+	<br>
+#!/bin/bash<br>
+while read massage<br>
+do<br>
+	echo pass is $massage<br>
+	sleep 1<br>
+done < /root/Desktop/shell/read.sh<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+echo -n your double name:<br>
+read fname sname<br>
+echo your first name is $fname! second name is $sname!<br>
+set |grep "name="<br>
+miao=`basename /etc/1.sh`<br>
+echo $miao<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+today=`date +%A`<br>
+echo today is $today<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+read -p "how are you !" xx<br>
+echo $xx<br>
+echo "hi $REPLY"<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+select item in one two three four five<br>
+do<br>
+	if [ ! -z "$item" ]; then<br>
+		echo "You chose option number $REPLY which is \"$item\"."<br>
+	else <br>
+		echo "$REPLY is not valid."<br>
+	fi<br>
+done<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+if [ -r "$1" ]; then<br>
+	. $1<br>
+fi<br>
+<br>
+<br>
+	<br>
+#!/bin/bash<br>
+<br>
+a=${b:?c}<br>
+echo "un $a-$b"<br>
+b=<br>
+a=${b:?c}<br>
+echo "null $a-$b"<br>
+b=123<br>
+a=${b:?c}<br>
+echo "va $a-$b"<br>
+<br>
+<br>
+<br>
+<br>
+#!/bin/bash<br>
+<br>
+#a=${b?c}<br>
+echo "un $a-$b"<br>
+b=<br>
+a=${b?c}<br>
+echo "null$a-$b-"<br>
+b=123<br>
+a=${b?c}<br>
+echo "va $a-$b"<br>
+<br>
+<br>
+<br>
+#!/bin/bash <br>
+<br>
+read -p "Enter a starting value of a: " a<br>
+read -p "Enter a starting value of b: " b<br>
+<br>
+until [ $a -gt 10 ] || [ $b -lt 100 ]<br>
+do <br>
+	echo "a is ${a} ; b is ${b}"<br>
+	let a=$a+1<br>
+	let b=$b-10<br>
+done<br>
+<br>
+echo finish !<br>
+</p>								
+							</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="index.html">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+</body>
+</html>

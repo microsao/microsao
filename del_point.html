@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>micro</title>
+	<meta name="keywords" content="botany, about us, responsive, bootstrap, free template, fluid layout" />
+	<meta name="description" content="Botany Template, About Us, free responsive template, fluid background image" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+</head>
+<body class="templatemo_flower_2">
+	<div id="main_container">
+		<div class="container" id="about">
+			<div class="row col-wrap">			 
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a  href="index.html"><img src="images/logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li><a href="del_char.html">删除字符</a></li>
+							<li><a href="mem.html">模拟内存管理</a></li>
+							<li class="active"><a href="#">删除节点</a></li>
+							<li><a href="linux_c.html">Linux C编程</a></li>
+							<li><a href="move_num.html">移动数字</a></li>
+							<li><a href="os.html">操作系统相关</a></li>
+							<li><a href="point_file.html">指针-文件</a></li>
+							<li><a href="struct.html">结构体排序</a></li>
+							<li><a href="xxx.html">杂七杂八</a></li>
+						</ul>
+					</nav> <!-- nav -->	
+				</div>			  	
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row"><div class="col col-md-12"><h2>Del_point<a href="#" title="#" class="right_container_title"  target="_blank"></a></h2></div></div>
+					<article class="row">							
+						<div class="col col-md-12">
+							
+							<p>#include <stdio.h><br>
+#include <stdlib.h><br>
+<br>
+<br>
+struct student *creat();<br>
+void print(struct student *head);<br>
+struct student * del(struct student *head,int x);<br>
+<br>
+<br>
+struct student<br>
+{<br>
+	int num;<br>
+	float score;<br>
+	struct student *next;<br>
+};<br>
+<br>
+<br>
+void main()<br>
+{<br>
+	int x;<br>
+	char a;<br>
+	struct student *head;<br>
+	head=creat();<br>
+	print(head);<br>
+	printf ("please input the num which you want to delete:\n");<br>
+	scanf ("%d",&x);<br>
+	head=del(head,x);<br>
+	printf ("delete again?y/n\n");<br>
+	scanf ("%c",&a);<br>
+	scanf ("%c",&a);<br>
+	while (a=='y')<br>
+	{<br>
+ 		printf ("please input the num which you want to delete:\n");<br>
+        	scanf ("%d",&x);<br>
+        	head=del(head,x);<br>
+        	printf ("delete again?y/n\n");<br>
+        	scanf ("%c",&a);<br>
+		scanf ("%c",&a);<br>
+	}<br>
+	print(head);<br>
+}<br>
+<br>
+<br>
+struct student *creat()<br>
+{<br>
+	struct student *head=NULL,*p1,*p2,s;<br>
+	printf ("please input num:\n");<br>
+	scanf ("%d",&s.num);<br>
+	while (s.num>0)<br>
+	{<br>
+		printf ("please input score:\n");<br>
+		scanf ("%f",&s.score);<br>
+		p1=(struct student *)malloc(sizeof(struct student));<br>
+		p1->num=s.num;<br>
+		p1->score=s.score;<br>
+		p1->next=NULL;<br>
+		if (head == NULL)<br>
+			head = p1;<br>
+		else <br>
+		{<br>
+			p2->next=p1;<br>
+		}<br>
+		p2=p1;<br>
+		printf ("please input num:\n");<br>
+		scanf ("%d",&s.num);<br>
+	}<br>
+	return (head);<br>
+}<br>
+<br>
+<br>
+void print(struct student *head)<br>
+{<br>
+ 	struct student *q1;<br>
+	q1=head;<br>
+	printf ("output:\n");<br>
+	printf ("num score:\n");<br>
+	if (head!=NULL)<br>
+		do<br>
+		{<br>
+			printf ("%-4d%-4.2f\n",q1->num,q1->score);<br>
+			q1=q1->next;<br>
+		}while (q1!=NULL);<br>
+}<br>
+	<br>
+<br>
+<br>
+struct student * del(struct student *head,int x)<br>
+{<br>
+	struct student *p,*q=NULL;<br>
+	if(x <= 0)<br>
+		return head;<br>
+<br>
+	for(p = head; p && (x != p->num); p=p->next)<br>
+		q = p;<br>
+	<br>
+	if(q!= NULL && q->next ==NULL)<br>
+	{<br>
+		printf("\n\nhave not this student !!!");<br>
+		return head;<br>
+	}<br>
+	else if(q == NULL)<br>
+	{<br>
+		p = head;<br>
+		head = p->next;<br>
+		free(p);<br>
+	}<br>
+	else<br>
+	{<br>
+		p = q->next;<br>
+		q->next = p->next;<br>
+		free(p);<br>
+	}<br>
+	return head;<br>
+}<br></p>								
+							</div>														            			            
+					</article> 		                          
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="index.html">microsao</a>
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+</body>
+</html>
